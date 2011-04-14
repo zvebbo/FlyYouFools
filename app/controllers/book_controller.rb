@@ -5,7 +5,7 @@ class BookController < ApplicationController
   def choose_dates
   end
 
-  def choose_travelers
+  def travelers
   end
 
   def choose_payment

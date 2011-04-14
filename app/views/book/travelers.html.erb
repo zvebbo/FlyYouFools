@@ -1,2 +1,21 @@
-<%= image_tag 'knappar1.png' %> <br>
+<%= image_tag 'knappar1.png' %>
 
+<% form_for :travelers, @travelers, :url => { :controller => :book, :action => :travelers } do |f| %>
+<table>
+	<tr>
+		<th>Namn</th>
+		<th>Personnummer</th>
+		<th></th>
+	</tr>
+	<% for traveler in @travelers %>
+	<tr>
+		<td><%= f.text_field :name %></td>
+		<td><%= f.text_field :person_number %></td>
+		<td>
+			<a href="#" onclick=""><%= image_tag 'plus.png' %></a>
+			<a href="#" onclick=""><%= image_tag 'minus.png' %></a>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<% end %>
